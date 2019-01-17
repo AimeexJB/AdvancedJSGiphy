@@ -15,7 +15,6 @@ class GifItem extends React.Component {
 				</a>
 			</div>
 
-
 		);
 	}
 }

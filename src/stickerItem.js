@@ -15,7 +15,6 @@ class StickerItem extends React.Component {
                 </a>
 			</div>
 
-
 		);
 	}
 }

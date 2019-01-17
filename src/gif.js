@@ -33,7 +33,7 @@ class Gif extends React.Component {
             );
   	     })
   	    .catch(error => {
-  	         console.log(error);
+  	        console.log(error);
   	    })
   	}
 
@@ -49,7 +49,7 @@ class Gif extends React.Component {
                             <div className="media">
                                 <div className="media-left">
                                     <figure className="image is-48x48">
-                                      <img src={this.state.gif.user.avatar_url} alt="Placeholder image" />
+                                        <img src={this.state.gif.user.avatar_url} alt="Placeholder image" />
                                     </figure>
                                 </div>
                                 <div className="media-content">
@@ -69,8 +69,8 @@ class Gif extends React.Component {
                             {this.state.click ?
                                 <a className="button is-danger" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-down"></i></span> <span>Dislike</span></a>
                                  :
-                                 <a className="button is-info" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-up"></i></span> <span>Like</span></a>
-                             }
+                                <a className="button is-info" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-up"></i></span> <span>Like</span></a>
+                            }
 
                         </div>
 
@@ -82,9 +82,8 @@ class Gif extends React.Component {
                         </div>
                     </div>
 
-
-
                 </div>
+
             </div>
         )
     }
