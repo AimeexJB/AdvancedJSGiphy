@@ -11,9 +11,18 @@ class Gif extends React.Component {
                     original:{}
                 },
                 user: {}
-            }
+            },
+            click: false
         }
+
+        this.handleClick = this.handleClick.bind(this);
     }
+
+    handleClick() {
+		this.setState( prevState => (
+			{click: !prevState.click }
+		))
+	}
 
     componentDidMount() {
         const {params} = this.props.match
@@ -57,10 +66,12 @@ class Gif extends React.Component {
                                 <p>Rating: {this.state.gif.rating}</p>
                             </div>
 
-                            <ul>
-                                <li><i class="far fa-heart"></i> Favourite</li>
-                                <li><i class="far fa-thumbs-down"></i> Dislike</li>
-                            </ul>
+                            {this.state.click ?
+                                <a className="button is-danger" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-down"></i></span> <span>Dislike</span></a>
+                                 :
+                                 <a className="button is-info" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-up"></i></span> <span>Like</span></a>
+                             }
+
                         </div>
 
                     </div>

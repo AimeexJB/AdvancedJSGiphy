@@ -10,8 +10,9 @@ class GifItem extends React.Component {
   render(){
 		return(
 			<div className="item">
+				<a href={'/gif/' + this.props.id}>
                     <img  src={this.props.images.original.url} />
-                    <a href={'/gif/' + this.props.id} class="button is-fullwidth">Preview</a>
+				</a>
 			</div>
 
 
