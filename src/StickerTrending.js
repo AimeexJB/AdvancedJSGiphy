@@ -28,7 +28,7 @@ class Trending extends React.Component {
 
         return (
             <div className="container">
-                <h1>Trending Stickers</h1>
+                <h1 className="has-text-centered is-uppercase title is-size-4">Trending Stickers</h1>
                 <div className="masonry">
                     {trendingList}
                 </div>

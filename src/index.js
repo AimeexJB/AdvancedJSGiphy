@@ -12,37 +12,39 @@ import Sticker from './sticker';
 
 const routing = (
     <Router>
+        <div>
+
+        <nav className="level is-dark" >
+            <p class="level-item has-text-centered">
+                <Link to="/">GIF's</Link>
+            </p>
+
+            <p class="level-item has-text-centered">
+                <h1 className="is-size-1">GIPHY</h1>
+            </p>
+
+            <p class="level-item has-text-centered">
+                <Link to="/StickerTrending">Stickers</Link>
+            </p>
+
+        </nav>
 
         <div className="container">
-            <section className="hero is-dark">
-                <nav className="navbar " role="navigation" aria-label="main navigation">
-                    <div className="navbar-menu">
-                        <div className="navbar-start">
 
-                            <a className="navbar-item">
-                                <Link to="/">GIF's</Link>
-                            </a>
-                            <a className="navbar-item">
-                                <Link to="/StickerTrending">Stickers</Link>
-                            </a>
-
-                        </div>
-                    </div>
-
-                    <div className="navbar-end">
-                        <div className="navbar-item">
-                            <input className="input" type="text" placeholder="Search" />
-                        </div>
-                    </div>
-                </nav>
-            </section>
-
-
+            <div class="field">
+                <p class="control has-icons-left">
+                    <input class="input" type="text" placeholder="Search" />
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-search"></i>
+                    </span>
+                </p>
+            </div>
 
             <Route exact path="/" component={Trending} />
             <Route path="/gif/:id" component={Gif} />
             <Route path="/StickerTrending" component={StickerTrending} />
             <Route path="/sticker/:id" component={Sticker} />
+        </div>
         </div>
     </Router>
 )

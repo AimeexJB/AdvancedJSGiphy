@@ -9,3 +9,11 @@
     margin: 0 0 1em;
     width: 100%;
 }
+
+body {
+    background-color: #f9fafb;
+}
+
+.level {
+    background-color: #babec4;
+}

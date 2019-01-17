@@ -32,7 +32,7 @@ class Sticker extends React.Component {
         const {params} = this.props.match
         return (
             <div>
-                <h1>Sticker</h1>
+                <h1 className="has-text-centered is-uppercase is-size-4">Sticker</h1>
 
                 <div className="columns">
                     <div className="column is-one-quarter">
@@ -53,8 +53,8 @@ class Sticker extends React.Component {
                             <br />
 
                             <div class="content">
-                                <p>Posted:</p>
-                                {this.state.sticker.import_datetime}
+                                <p>Posted: {this.state.sticker.import_datetime}</p>
+
 
                             </div>
                         </div>
