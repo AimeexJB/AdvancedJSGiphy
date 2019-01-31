@@ -49,12 +49,12 @@ class Sticker extends React.Component {
                             <div className="media">
                                 <div className="media-left">
                                     <figure className="image is-48x48">
-                                        <img src={this.state.sticker.user.avatar_url} alt="Placeholder image" />
+                                        <img src={this.state.sticker.user && this.state.sticker.user.avatar_url ? this.state.sticker.user.avatar_url : 'https://ryanacademy.ie/wp-content/uploads/2017/04/user-placeholder.png'} alt="Placeholder image" />
                                     </figure>
                                 </div>
                                 <div className="media-content">
-                                    <p className="title is-4">{this.state.sticker.user.display_name}</p>
-                                    <p className="subtitle is-6">@{this.state.sticker.user.username}</p>
+                                    <p className="title is-4">{this.state.sticker.user && this.state.sticker.user.display_name ? this.state.sticker.user.display_name : 'Username Goes Here'}</p>
+                                    <p className="subtitle is-6">@{this.state.sticker.user && this.state.sticker.user.username ? this.state.sticker.user.username : 'Username'}</p>
                                 </div>
                             </div>
 
@@ -66,11 +66,23 @@ class Sticker extends React.Component {
                                 <p>Rating: {this.state.sticker.rating}</p>
                             </div>
 
-                            {this.state.click ?
-                                <a className="button is-danger" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-down"></i></span> <span>Dislike</span></a>
-                                 :
-                                <a className="button is-info" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-up"></i></span> <span>Like</span></a>
-                            }
+                            <div>
+                                {this.state.click ?
+                                    <a className="button is-danger" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-down"></i></span> <span>Dislike</span></a>
+                                     :
+                                    <a className="button" onClick={this.handleClick}><span className="icon"><i class="far fa-thumbs-down"></i></span> <span>Dislike</span></a>
+                                }
+                            </div>
+
+                            <br />
+
+                            <div>
+                                {this.state.click ?
+                                    <a className="button" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-up"></i></span> <span>Like</span></a>
+                                     :
+                                    <a className="button is-info" onClick={this.handleClick}><span className="icon"><i class="far fa-thumbs-up"></i></span> <span>Like</span></a>
+                                }
+                            </div>
 
                         </div>
 

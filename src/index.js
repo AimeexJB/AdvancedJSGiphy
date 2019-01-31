@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Link, BrowserRouter, Switch } from 'react-router-dom'
 import './style.css';
 
 import Trending from './Trending';
@@ -9,48 +9,56 @@ import Gif from './gif';
 import StickerTrending from './StickerTrending';
 import Sticker from './sticker';
 
+import Search from './search';
+import SearchBar from './searchbar';
 
-const routing = (
-    <Router>
-        <div>
+class Routing extends React.Component{
+    constructor(props){
+        super(props)
+    }
 
-        <nav className="level is-dark" >
-            <p class="level-item has-text-centered">
-                <Link to="/">GIF's</Link>
-            </p>
+    render(){
+        return(
+            <BrowserRouter>
+                <div>
 
-            <p class="level-item has-text-centered">
-                <h1 className="is-size-1">GIPHY</h1>
-            </p>
+                    <nav className="level is-dark" >
+                        <p className="level-item has-text-centered">
+                            <Link to="/">GIF's</Link>
+                        </p>
 
-            <p class="level-item has-text-centered">
-                <Link to="/StickerTrending">Stickers</Link>
-            </p>
+                        <p className="level-item has-text-centered">
+                            <h1 className="is-size-1">GIPHY</h1>
+                        </p>
 
-        </nav>
+                        <p className="level-item has-text-centered">
+                            <Link to="/StickerTrending">Stickers</Link>
+                        </p>
 
-        <div className="container">
+                    </nav>
 
-            <div class="field">
-                <p class="control has-icons-left">
-                    <input class="input" type="text" placeholder="Search" />
-                    <span class="icon is-small is-left">
-                        <i class="fas fa-search"></i>
-                    </span>
-                </p>
-            </div>
+                    <div className="container">
 
-            <Route exact path="/" component={Trending} />
-            <Route path="/gif/:id" component={Gif} />
-            <Route path="/StickerTrending" component={StickerTrending} />
-            <Route path="/sticker/:id" component={Sticker} />
-        </div>
-        </div>
-    </Router>
-)
+                        <SearchBar />
+
+                        <Switch>
+                            <Route exact path="/" component={Trending} />
+                            <Route path="/gif/:id" component={Gif} />
+                            <Route path="/StickerTrending" component={StickerTrending} />
+                            <Route path="/sticker/:id" component={Sticker} />
+                            <Route path="/search/:query" component={Search} />
+                        </Switch>
+
+                    </div>
+                    
+                </div>
+            </BrowserRouter>
+        )
+    }
+}
 
 
 ReactDOM.render(
-  routing,
+  <Routing />,
   document.getElementById('root')
 );
