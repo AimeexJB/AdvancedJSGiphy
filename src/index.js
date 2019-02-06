@@ -28,7 +28,7 @@ class Routing extends React.Component{
                         </p>
 
                         <p className="level-item has-text-centered">
-                            <h1 className="is-size-1">GIPHY</h1>
+                            <h1 className="is-size-1">GIF APP</h1>
                         </p>
 
                         <p className="level-item has-text-centered">
@@ -50,7 +50,7 @@ class Routing extends React.Component{
                         </Switch>
 
                     </div>
-                    
+
                 </div>
             </BrowserRouter>
         )
