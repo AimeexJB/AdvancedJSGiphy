@@ -30,4 +30,4 @@ Your app is ready to be deployed!
 ### `firebase deploy`
 
 Using Firebase to host the App online.
-It will use the `build` folder and deploy to the [URL] (https://reactgif-app.firebaseapp.com)
+It will use the `build` folder and deploy to the [URL](https://reactgif-app.firebaseapp.com)
