@@ -30,7 +30,7 @@ class Search extends React.Component {
 
         return (
             <div className="container">
-                <h1 className="has-text-centered is-uppercase title is-size-4">Trending GIF's</h1>
+                <h1 className="has-text-centered is-uppercase title is-size-4">Search</h1>
                 <div className="masonry">
                     {trendingList}
                 </div>
