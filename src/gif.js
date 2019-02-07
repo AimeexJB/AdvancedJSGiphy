@@ -64,6 +64,8 @@ class Gif extends React.Component {
                                 <p className="title is-4">{this.state.gif.title}</p>
                                 <p>Posted: {this.state.gif.import_datetime}</p>
                                 <p>Rating: {this.state.gif.rating}</p>
+                                <p>Profile: {this.state.profile_url}</p>
+                                <p>Twitter: {this.state.twitter}</p>
                             </div>
 
                             <div>

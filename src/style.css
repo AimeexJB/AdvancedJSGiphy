@@ -4,7 +4,6 @@
 }
 
 .item { /* Masonry bricks or child elements */
-    background-color: #eee;
     display: inline-block;
     margin: 0 0 1em;
     width: 100%;
@@ -16,4 +15,8 @@ body {
 
 .level {
     background-color: #c7b3e0;
+}
+
+.gifRounded {
+    border-radius: 20px;
 }

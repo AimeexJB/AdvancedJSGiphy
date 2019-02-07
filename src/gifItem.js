@@ -11,7 +11,7 @@ class GifItem extends React.Component {
 		return(
 			<div className="item">
 				<a href={'/gif/' + this.props.id}>
-                    <img  src={this.props.images.original.url} />
+                    <img className="gifRounded"  src={this.props.images.original.url} />
 				</a>
 			</div>
 
