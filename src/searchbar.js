@@ -19,7 +19,6 @@ class SearchBar extends React.Component {
 
     handleKeyPress(event) {
         if (event.key === 'Enter') {
-            console.log('enter key pressed')
             this.props.history.push('/search/' + this.state.query);
         }
     }

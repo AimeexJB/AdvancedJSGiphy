@@ -14,7 +14,7 @@ class Search extends React.Component {
 
     componentDidMount() {
         const {params} = this.props.match
-        axios.get('http://api.giphy.com/v1/gifs/search?q=' + params.query + '&api_key=iDu8o3DlFjmQIQtZZGgzKsDPPbK6IP04')
+        axios.get('https://api.giphy.com/v1/gifs/search?q=' + params.query + '&api_key=iDu8o3DlFjmQIQtZZGgzKsDPPbK6IP04')
         .then(response => {
             this.setState(
                 {search: response.data.data}

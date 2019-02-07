@@ -26,7 +26,7 @@ class Gif extends React.Component {
 
     componentDidMount() {
         const {params} = this.props.match
-        axios.get('http://api.giphy.com/v1/gifs/' + params.id + '?api_key=iDu8o3DlFjmQIQtZZGgzKsDPPbK6IP04')
+        axios.get('https://api.giphy.com/v1/gifs/' + params.id + '?api_key=iDu8o3DlFjmQIQtZZGgzKsDPPbK6IP04')
         .then(response => {
             this.setState(
                 {gif: response.data.data}
@@ -49,7 +49,13 @@ class Gif extends React.Component {
                             <div className="media">
                                 <div className="media-left">
                                     <figure className="image is-48x48">
-                                        <img src={this.state.gif.user && this.state.gif.user.avatar_url ? this.state.gif.user.avatar_url : 'https://ryanacademy.ie/wp-content/uploads/2017/04/user-placeholder.png'}  />
+                                        <img src=
+                                            {this.state.gif.user && this.state.gif.user.avatar_url ?
+                                                this.state.gif.user.avatar_url
+                                                 :
+                                                'https://ryanacademy.ie/wp-content/uploads/2017/04/user-placeholder.png'
+                                            }
+                                        />
                                     </figure>
                                 </div>
                                 <div className="media-content">
@@ -64,8 +70,6 @@ class Gif extends React.Component {
                                 <p className="title is-4">{this.state.gif.title}</p>
                                 <p>Posted: {this.state.gif.import_datetime}</p>
                                 <p>Rating: {this.state.gif.rating}</p>
-                                <p>Profile: {this.state.profile_url}</p>
-                                <p>Twitter: {this.state.twitter}</p>
                             </div>
 
                             <div>

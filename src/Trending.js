@@ -12,7 +12,7 @@ class Trending extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://api.giphy.com/v1/gifs/trending?api_key=iDu8o3DlFjmQIQtZZGgzKsDPPbK6IP04')
+        axios.get('https://api.giphy.com/v1/gifs/trending?api_key=iDu8o3DlFjmQIQtZZGgzKsDPPbK6IP04')
         .then(response => {
             this.setState(
                 {trending: response.data.data}
