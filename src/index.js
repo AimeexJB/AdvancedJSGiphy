@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter, Switch } from 'react-router-dom'
+import { Route, Link, BrowserRouter, Switch } from 'react-router-dom';
 import './style.css';
 
 import Trending from './Trending';
@@ -14,7 +14,7 @@ import SearchBar from './searchbar';
 
 class Routing extends React.Component{
     constructor(props){
-        super(props)
+        super(props);
     }
 
     render(){
@@ -53,12 +53,12 @@ class Routing extends React.Component{
 
                 </div>
             </BrowserRouter>
-        )
+        );
     }
 }
 
 
 ReactDOM.render(
-  <Routing />,
-  document.getElementById('root')
+    <Routing />,
+    document.getElementById('root')
 );

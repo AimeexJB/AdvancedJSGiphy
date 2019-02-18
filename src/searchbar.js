@@ -36,11 +36,11 @@ class SearchBar extends React.Component {
                 </p>
             </div>
 
-        )
+        );
 
     }
 
 
 }
 
-export default withRouter(SearchBar)
+export default withRouter(SearchBar);

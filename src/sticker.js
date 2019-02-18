@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from "axios";
+import axios from 'axios';
 
 class Sticker extends React.Component {
     constructor(props){
@@ -13,32 +13,32 @@ class Sticker extends React.Component {
                 user: {}
             },
             click: false
-        }
+        };
 
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-		this.setState( prevState => (
-			{click: !prevState.click }
-		))
-	}
+        this.setState( prevState => (
+            {click: !prevState.click }
+        ));
+    }
 
     componentDidMount() {
-        const {params} = this.props.match
+        const {params} = this.props.match;
         axios.get('https://api.giphy.com/v1/gifs/' + params.id + '?api_key=iDu8o3DlFjmQIQtZZGgzKsDPPbK6IP04')
-        .then(response => {
-            this.setState(
-                {sticker: response.data.data}
-            );
+            .then(response => {
+                this.setState(
+                    {sticker: response.data.data}
+                );
   	     })
   	    .catch(error => {
   	        console.log(error);
-  	    })
+  	    });
   	}
 
     render() {
-        const {params} = this.props.match
+        const {params} = this.props.match;
         return (
             <div>
 
@@ -69,7 +69,7 @@ class Sticker extends React.Component {
                             <div>
                                 {this.state.click ?
                                     <a className="button is-danger" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-down"></i></span> <span>Dislike</span></a>
-                                     :
+                                    :
                                     <a className="button" onClick={this.handleClick}><span className="icon"><i class="far fa-thumbs-down"></i></span> <span>Dislike</span></a>
                                 }
                             </div>
@@ -79,7 +79,7 @@ class Sticker extends React.Component {
                             <div>
                                 {this.state.click ?
                                     <a className="button" onClick={this.handleClick}> <span className="icon"><i class="far fa-thumbs-up"></i></span> <span>Like</span></a>
-                                     :
+                                    :
                                     <a className="button is-info" onClick={this.handleClick}><span className="icon"><i class="far fa-thumbs-up"></i></span> <span>Like</span></a>
                                 }
                             </div>
@@ -96,8 +96,8 @@ class Sticker extends React.Component {
 
                 </div>
             </div>
-        )
+        );
     }
 }
 
-export default Sticker
+export default Sticker;

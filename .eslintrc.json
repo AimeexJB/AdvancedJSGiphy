@@ -1,0 +1,21 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "semi": 2,
+        "quotes": [2, "single"],
+        "no-var": 2,
+        "func-style": [0, "expression"],
+        "no-undefined": 2,
+        "prefer-const": 0,
+        "comma-style": 2,
+        "indent": ["error", 4],
+        "space-infix-ops": 2,
+        "eqeqeq": ["error", "always"]
+    }
+}
