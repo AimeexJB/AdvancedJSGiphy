@@ -1,3 +1,5 @@
+This project is hosted with Firebase and can be viewed at: https://reactgif-app.firebaseapp.com/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 For this assignment we were tasked with developing a React Web App using the React JavaScript library and an API of our choosing.
